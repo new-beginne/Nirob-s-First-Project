@@ -14,7 +14,7 @@
       overflow-x: auto;
       white-space: pre-wrap;
       word-wrap: break-word;
-      margin-top: 40px;
+      margin-top: 20px;
       font-family: monospace;
       position: relative;
     }
@@ -60,6 +60,20 @@
       font-size: 20px;
       padding: 15px;
     }
+
+    hr.thin {
+      height: 1px;
+      background-color: #999;
+      border: none;
+      margin: 20px 0;
+    }
+
+    hr.thick {
+      height: 4px;
+      background-color: #333;
+      border: none;
+      margin: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -70,14 +84,14 @@
 
     <p>Welcome! This is My First Website</p>
     
-    <h2>Contact</h2>
+    <h2>Contact:</h2>
     <ul>
-      <li>Email: <a href="mailto:mdnirobhasan248@gmail.com">mdnirobhasan248@gmail.com</a></li>
+      <li>✆ <a href="tel:01610331271">Mobile: 01610331271</a></li>
+      <li>✉ <a href="mailto:mdnirobhasan248@gmail.com">mdnirobhasan248@gmail.com</a></li>
       <li>Facebook: <a href="https://www.facebook.com/share/1NMbtH12Xm/" target="_blank">Md. Nirob Hasan</a></li>
     </ul>
 
-    <!-- মোটা আন্ডারলাইন -->
-    <hr style="height: 4px; background-color: #333; border: none; margin: 20px 0;">
+    <hr class="thick">
 
     <h2><u>Practice</u></h2>
     <div class="code-block">
@@ -97,6 +111,8 @@
 </code>
     </div>
 
+    <hr class="thin">
+
     <h2>Preview</h2>
     <div class="preview-box">
       <table border=1>
@@ -112,10 +128,10 @@
       </table>
     </div>
 
-    <!-- Thanks for visit -->
+    <hr class="thick">
+
     <p style="text-align: center; font-weight: bold; margin-top: 40px;">Thanks For Visit</p>
 
-    <!-- Click here for next বাটন নিচে -->
     <div style="text-align: center; margin-top: 10px;">
       <button onclick="sayHello()">Click here for next</button>
     </div>
