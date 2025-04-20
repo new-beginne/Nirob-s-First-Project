@@ -5,6 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nirob's site</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .code-block {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin-top: 40px;
+      font-family: monospace;
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .copy-btn:active {
+      background-color: #0056b3;
+    }
+
+    .preview-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th[colspan] {
+      font-size: 20px;
+      padding: 15px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -19,13 +75,57 @@
       <li>Email: <a href="mailto:mdnirobhasan248@gmail.com">mdnirobhasan248@gmail.com</a></li>
       <li>Facebook: <a href="https://www.facebook.com/share/1NMbtH12Xm/" target="_blank">Md. Nirob Hasan</a></li>
     </ul>
-<p><b><h4>Thanks For Visit</h4></b></p>
+
+    <p><b><h4>Thanks For Visit</h4></b></p>
     <button onclick="sayHello()">Click here for next</button>
+
+    <!-- নতুন কোড ও প্রিভিউ অংশ -->
+    <h2>HTML টেবিল কোড</h2>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode()">Copy</button>
+<code id="codeText">
+&lt;table border=1&gt;<br>
+  &nbsp;&nbsp;&lt;tr align="center"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th colspan=4&gt;&lt;u&gt;&lt;i&gt;&lt;b&gt;HSC Result-2024&lt;/b&gt;&lt;/i&gt;&lt;/u&gt;&lt;/th&gt;<br>
+  &nbsp;&nbsp;&lt;/tr&gt;<br>
+  &nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th align="left"&gt;Roll&lt;/th&gt;&lt;th align="center"&gt;Name&lt;/th&gt;&lt;th align="center"&gt;Result&lt;/th&gt;&lt;th align="center"&gt;Board&lt;/th&gt;<br>
+  &nbsp;&nbsp;&lt;/tr&gt;<br>
+  &nbsp;&nbsp;&lt;tr&gt;&lt;td align="center"&gt;538&lt;/td&gt;&lt;td&gt;Majharul&lt;/td&gt;&lt;td align="center"&gt;5.00&lt;/td&gt;&lt;td rowspan=2 align="center"&gt;Noakhali&lt;/td&gt;&lt;/tr&gt;<br>
+  &nbsp;&nbsp;&lt;tr&gt;&lt;td align="center"&gt;586&lt;/td&gt;&lt;td&gt;Sanuar&lt;/td&gt;&lt;td align="center"&gt;Fail&lt;/td&gt;&lt;/tr&gt;<br>
+  &nbsp;&nbsp;&lt;tr&gt;&lt;td align="center"&gt;578&lt;/td&gt;&lt;td align="center"&gt;Foysal&lt;/td&gt;&lt;td align="center"&gt;2.00&lt;/td&gt;&lt;td align="center"&gt;Barishal&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</code>
+    </div>
+
+    <h2>প্রিভিউ</h2>
+    <div class="preview-box">
+      <table border=1>
+        <tr align="center">
+          <th colspan=4><u><i><b>HSC Result-2024</b></i></u></th>
+        </tr>
+        <tr>
+          <th align="left">Roll</th><th align="center">Name</th><th align="center">Result</th><th align="center">Board</th>
+        </tr>
+        <tr><td align="center">538</td><td>Majharul</td><td align="center">5.00</td><td rowspan=2 align="center">Noakhali</td></tr>
+        <tr><td align="center">586</td><td>Sanuar</td><td align="center">Fail</td></tr>
+        <tr><td align="center">578</td><td align="center">Foysal</td><td align="center">2.00</td><td align="center">Barishal</td></tr>
+      </table>
+    </div>
+    <!-- শেষ -->
+
   </div>
 
   <script>
     function sayHello() {
       alert("Pray For Me: Thanks!");
+    }
+
+    function copyCode() {
+      const code = document.getElementById("codeText").innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert("Code copied!");
+      });
     }
   </script>
 </body>
