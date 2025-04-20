@@ -6,6 +6,13 @@
   <title>nirob's site</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
     .code-block {
       background-color: #f0f0f0;
       border: 1px solid #ccc;
@@ -61,18 +68,16 @@
       padding: 15px;
     }
 
-    hr.thin {
-      height: 1px;
-      background-color: #999;
-      border: none;
-      margin: 20px 0;
+    .underline-light {
+      border-bottom: 1px solid #999;
+      margin-top: 5px;
+      margin-bottom: 20px;
     }
 
-    hr.thick {
-      height: 4px;
-      background-color: #333;
-      border: none;
-      margin: 20px 0;
+    .underline-bold {
+      border-bottom: 4px solid #333;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -86,14 +91,16 @@
     
     <h2>Contact:</h2>
     <ul>
-      <li>✆ <a href="tel:01610331271">Mobile: 01610331271</a></li>
-      <li>✉ <a href="mailto:mdnirobhasan248@gmail.com">mdnirobhasan248@gmail.com</a></li>
+      <li>✆ Mobile: <a href="tel:01610331271">01610331271</a></li>
+      <li>✉ Email: <a href="mailto:mdnirobhasan248@gmail.com">mdnirobhasan248@gmail.com</a></li>
       <li>Facebook: <a href="https://www.facebook.com/share/1NMbtH12Xm/" target="_blank">Md. Nirob Hasan</a></li>
     </ul>
 
-    <hr class="thick">
+    <hr class="underline-bold">
 
     <h2><u>Practice</u></h2>
+    <hr class="underline-light">
+
     <div class="code-block">
       <button class="copy-btn" onclick="copyCode()">Copy</button>
 <code id="codeText">
@@ -111,9 +118,9 @@
 </code>
     </div>
 
-    <hr class="thin">
-
     <h2>Preview</h2>
+    <hr class="underline-light">
+
     <div class="preview-box">
       <table border=1>
         <tr align="center">
@@ -128,7 +135,7 @@
       </table>
     </div>
 
-    <hr class="thick">
+    <hr class="underline-bold">
 
     <p style="text-align: center; font-weight: bold; margin-top: 40px;">Thanks For Visit</p>
 
